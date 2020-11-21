@@ -143,6 +143,7 @@ def main():
         st.text(" ")
         st.text(" ")
         st.text("Hey! I am here to assist you")
+
         st.markdown("![Alt Text](https://media.giphy.com/media/SKT4HdqZSSPbaobtPs/giphy.gif)")
 
         st.success("SIGN UP SO THAT YOU CAN ACCESS OUR APP")
@@ -154,8 +155,8 @@ def main():
         st.success(
             "There are Lots of unused and left over medicine tablets. We all have with us and after some time we don't remember where and when to the use that medicine and we waste our money and go to the market to buy the medicine with same salt composition. This App is very user Friendly We Just Have To Upload or Click The Picture of the Medicine Box and it will give us all the details >>>*&  "
             "Added Support of Eye blinking Counter: Eye Blinking is a Serious Symptom of depression,anxiety etc ".upper())
-        speak("There are Lots of unused and left over medicine tablets. We all have with us and after some time we don't remember where and when to the use that medicine and we waste our money and go to the market to buy the medicine with same salt composition. This App is very user Friendly We Just Have To Upload or Click The Picture of the Medicine Box and it will give us all the details >>>*&  "
-            "Added Support of Eye blinking Counter: Eye Blinking is a Serious Symptom of depression,anxiety etc ")
+        #speak("There are Lots of unused and left over medicine tablets. We all have with us and after some time we don't remember where and when to the use that medicine and we waste our money and go to the market to buy the medicine with same salt composition. This App is very user Friendly We Just Have To Upload or Click The Picture of the Medicine Box and it will give us all the details >>>*&  "
+          #  "Added Support of Eye blinking Counter: Eye Blinking is a Serious Symptom of depression,anxiety etc ")
     elif choice == "Login":
         st.subheader("Login Section")
 
@@ -178,11 +179,14 @@ def main():
 
                     st.subheader("HEALTH PROBLEM DETECTION")
 
-                    image_file = st.file_uploader("Upload Image", type=['jpg', 'png', 'jpeg'])
+                    image_file = st.file_uploader("Upload Image", type=['jpg','png','jpeg'])
+
+
 
                     if image_file is not None:
                         our_image = Image.open(image_file)
-                        img = cv2.imread('check.jpg')
+                        a=st.text_input('name of image')
+                        img = cv2.imread(a)
                         st.text("Original Image")
                             # st.write(type(our_image))
                         st.image(our_image)
