@@ -66,7 +66,7 @@ def view_all_users():
     data = c.fetchall()
     return data
 def main():
-    """Built By Harshit Trehan"""
+    
 
     html_temp = """
 							<div style="background-color:#6666ff ;padding:20px">
